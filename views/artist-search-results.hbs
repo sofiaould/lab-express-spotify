@@ -1,5 +1,7 @@
-{{#each}}
+{{#each data.body.artists.items}}
 <div>
+    
+    <img src="{{this.images.[0].url}}" alt="image of album">
     
 </div>
 {{/each}}
