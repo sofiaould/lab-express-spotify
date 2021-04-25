@@ -1,0 +1,9 @@
+{{#each data}}
+<div class="card-{{this.type}}">
+    <img src="{{this.image.url}}" height="{{this.image.size.height}}" width="{{this.image.size.width}}" alt="image of {{this.type}}">
+    <div>
+    <h1>{{this.name}}</h1>
+    <button><a href="/{{this.subType}}/{{this.id}}">Views {{this.subType}}</a></button>
+    </div>   
+</div>
+{{/each}}

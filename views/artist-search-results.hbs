@@ -1,7 +1,10 @@
-{{#each data.body.artists.items}}
-<div>
-    
-    <img src="{{this.images.[0].url}}" alt="image of album">
-    
+{{!-- {{#each data}}
+<div class="card-artist">
+    <img src="{{this.image.url}}" height="{{this.image.size.height}}" width="{{this.image.size.width}}" alt="image of artist">
+    <div>
+    <h1>{{this.name}}</h1>
+    <button><a href="/albums/{{this.id}}">Views albums</a></button>
+    </div>   
 </div>
-{{/each}}
+{{/each}} --}}
+{{>card}}
