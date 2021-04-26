@@ -64,10 +64,10 @@ app.get("/tracks/:id", async (req, res, next) => {
   try {
     let dataSpotify = await spotifyApi.getAlbumTracks(req.params.id);
     //let dataView = dataSpotify.body.items.map((element) => createDataCard(element, "tracks"));
-    let test = await spotifyApi.getAudioFeaturesForTrack(dataSpotify.body.items[0].id);
+    // let test = await spotifyApi.getAudioFeaturesForTrack(dataSpotify.body.items[0].id);
     // let test = await spotifyApi.getAudioAnalysisForTrack(dataSpotify.body.items[0].id);
-    console.log(dataSpotify.body.items);
-    res.render("tracks-search-results" /*, { data: dataView }*/);
+
+    res.render("tracks-search-results", { data: dataSpotify.body.items });
   } catch (error) {
     console.log("Oops error => ", error);
   }
