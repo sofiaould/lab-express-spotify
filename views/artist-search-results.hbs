@@ -1,10 +1,8 @@
-{{!-- {{#each data}}
-<div class="card-artist">
-    <img src="{{this.image.url}}" height="{{this.image.size.height}}" width="{{this.image.size.width}}" alt="image of artist">
-    <div>
-    <h1>{{this.name}}</h1>
-    <button><a href="/albums/{{this.id}}">Views albums</a></button>
-    </div>   
+{{#each data }}
+<div>
+    <h2>{{name}}</h2>
+    <img src="{{images.[0].url }}" alt="" height='150px'width='150px'>
+    <a href="/albums/{{id}}">View Albums</a>
+
 </div>
-{{/each}} --}}
-{{>card}}
+{{/each}}
